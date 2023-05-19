@@ -46,6 +46,7 @@ export type ClassNamesTypeProp = {
     input?: (p?: object | null | undefined) => string | undefined;
     toggleButton?: (p?: object | null | undefined) => string | undefined;
     footer?: (p?: object | null | undefined) => string | undefined;
+    popover?: (p?: object | null | undefined) => string | undefined;
 };
 
 export type PopoverDirectionType = "up" | "down";
@@ -78,6 +79,7 @@ export interface DatepickerType {
     disabledDates?: DateRangeType[] | null;
     startWeekOn?: string | null;
     popoverDirection?: PopoverDirectionType;
+    popoverClassName?: ((className: string) => string) | string | null;
 }
 
 export type ColorKeys = (typeof COLORS)[number]; // "blue" | "orange"
